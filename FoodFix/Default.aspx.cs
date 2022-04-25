@@ -19,10 +19,8 @@ namespace FoodFix
 
                 // ---------------- Sql Connection ---------------
                 string mainConnection = ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString;
-                SqlConnection sqlConnection = new SqlConnection(mainConnection);
+                SqlConnection sqlConnection = new SqlConnection(mainConnection);    
                 GetPatiensFromDB(sqlConnection);
-
-
                 sqlConnection.Close();
             }
         }
@@ -30,7 +28,7 @@ namespace FoodFix
         public void GetPatiensFromDB(SqlConnection sqlConnection)
         {
             //Get Patiens List From DB
-            string sqlQuerry = "SELECT * FROM [FoodFIx].[dbo].[Patient]";
+            string sqlQuerry = "SELECT * FROM [dbo].[Patient]";
             SqlCommand sqlCommand = new SqlCommand(sqlQuerry, sqlConnection);
             sqlConnection.Open();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
