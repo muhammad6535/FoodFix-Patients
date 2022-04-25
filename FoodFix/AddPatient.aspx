@@ -18,7 +18,6 @@
 
         input {
             margin: 2px;
-
         }
 
         label {
@@ -48,7 +47,7 @@
         </div>
     </form>
     <footer>
-            <a href="Patients.aspx" class="PatientsList">Go To Patients List</a>
+            <a href="Default.aspx" class="PatientsList">Go To Patients List</a>
         </footer>
     </center>
 </body>

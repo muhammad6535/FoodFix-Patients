@@ -42,7 +42,7 @@ namespace FoodFix
             double BMI = weight / Math.Pow(height / 100, 2);
 
             //Get Patiens List From DB
-           return "INSERT INTO [dbo].[Patient] ([ID] ,[Name] ,[Surname] ,[Height] ,[Weight] ,[BMI]) " +
+           return "INSERT INTO [Patient] ([ID] ,[Name] ,[Surname] ,[Height] ,[Weight] ,[BMI]) " +
                 "VALUES (" + Id + ",'" + name + "','" + surName + "'," + height + "," + weight + "," + BMI + ")";
         }
 
